@@ -1,0 +1,37 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $dark;
+  color: $white;
+  overflow: hidden;
+}
+.accent {
+  color: $cyan;
+}
+img {
+  display: block;
+}
+
+// .container {
+//   width: 100%;
+// }
+
+// @media screen and (min-width: 48em) {
+//   .container {
+//     padding-inline: 2.5rem;
+//   }
+// }
