@@ -1,0 +1,124 @@
+.features {
+  padding-block: 9rem;
+
+  .container {
+    display: grid;
+    place-items: center;
+    padding-inline: 1.5rem;
+    gap: 3.5rem;
+    max-width: 26rem;
+    margin-inline: auto;
+
+    .feature {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      .feature-logo {
+        width: 7.5rem;
+        height: 7.75rem;
+        flex-shrink: 0;
+        background: $dark-blue;
+        border-radius: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-block-end: 2rem;
+        img {
+          width: 56px;
+        }
+      }
+
+      h2 {
+        font-size: 1.125rem;
+        font-weight: 800;
+        line-height: normal;
+        margin-block-end: 0.6rem;
+      }
+      p {
+        color: $grey;
+        font-size: 0.9375rem;
+        font-weight: 400;
+        line-height: 1.6667; /* 166.667% */
+        max-width: 21.25rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .features {
+    .container {
+      padding: 0;
+      gap: 2.5rem;
+      max-width: 36rem;
+
+      .feature {
+        flex-direction: row;
+        gap: 3.5rem;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+
+        &:nth-of-type(2n + 1) {
+          padding-inline-start: 3.625rem;
+        }
+
+        .feature-logo {
+          margin-block-end: 3rem;
+        }
+        h2 {
+          margin-block-end: 1.44rem;
+        }
+
+        .feature-logo {
+          margin-block: auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .features {
+    .container {
+      max-width: 70rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.875rem;
+
+      .feature {
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+
+        .feature-logo {
+          width: 10rem;
+          height: 10.25rem;
+
+          img {
+            width: 80px;
+          }
+        }
+
+        &:nth-of-type(2n + 1) {
+          padding: 0;
+        }
+
+        &:nth-of-type(2n) {
+          padding-block-start: 48px;
+        }
+
+        h2 {
+          font-size: 1.125rem;
+        }
+
+        .feature-content {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
