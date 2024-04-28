@@ -1,0 +1,87 @@
+.footer {
+  margin-block: 10rem;
+
+  position: relative;
+
+  .bg-footer {
+    position: absolute;
+    width: 100%;
+    height: 5rem;
+    background-image: url("../assets/bg-footer-squiggle.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: -1rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+    max-width: 25rem;
+    margin-inline: auto;
+  }
+  .footer-top {
+    position: relative;
+    text-align: center;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      line-height: normal;
+      max-width: 15rem;
+      margin-inline: auto;
+      margin-block-end: 2rem;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    input,
+    button {
+      height: 3rem;
+      flex-shrink: 0;
+      outline: none;
+      border: none;
+      border-radius: 1.5rem;
+      background: $dark-blue;
+      color: rgba(255, 255, 255, 0.4);
+      padding-inline: 1.2rem;
+
+      font-size: 0.9375rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 1.6667;
+    }
+
+    button {
+      background-color: $cyan;
+      color: $dark-blue;
+      font-size: 0.9375rem;
+    }
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .footer {
+    .bg-footer {
+      height: 100%;
+    }
+    .container {
+      max-width: 32rem;
+      padding: 0;
+
+      .footer-top {
+        h2 {
+          max-width: 100%;
+        }
+      }
+
+      form {
+        display: grid;
+        grid-template-columns: 80fr 35fr;
+        gap: 1rem;
+      }
+    }
+  }
+}
